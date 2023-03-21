@@ -47,7 +47,13 @@ public class Ex1 {
     }
     //Ex4
     static String NomeIdade(String nome, int dia, int mes, int ano) {
-        String nomeIdade = "Nome: " + nome + " - Idade: " + dia + "/" + mes + "/" + ano;
+        int idade = 2023 - ano;
+        if (03 - mes < 0){
+            idade -= 1;
+        } else if (3 - mes == 0 && 15 - dia <= 0) {
+            idade -= 1;
+        }
+        String nomeIdade = "Nome: " + nome + " - Idade: " + idade;
         return nomeIdade;
     }
     //Ex5
